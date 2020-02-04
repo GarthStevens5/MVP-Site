@@ -40,6 +40,7 @@ const HomePage = () => {
             </Carousel.Caption>
         </Carousel.Item>
     </Carousel>
+    <hr />
     <CardDeck>
   <Card>
     <Card.Img variant="top" src="https://cdn140.picsart.com/318217748091201.jpg?type=webp&to=crop&r=256" />
@@ -78,6 +79,7 @@ const HomePage = () => {
     </Card.Footer>
   </Card>
 </CardDeck>
+<hr />
     </div>
     )
 }

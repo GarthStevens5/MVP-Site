@@ -1,6 +1,6 @@
 Body{
     width: 100vw;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 img.App-logo{
@@ -14,7 +14,7 @@ img.App-logo{
     justify-content: space-between;
 }
 
-.Footer{
-    background-color: gray;
-    height: 18vh;
+Footer{
+    color: aliceblue;
+    background-color: rgb(63, 63, 63);
 }
