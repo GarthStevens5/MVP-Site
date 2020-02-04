@@ -1,0 +1,14 @@
+Body{
+    background-color: beige;
+}
+
+img.App-logo{
+    height: 70px;
+    width: 100px;
+  }
+
+.HomePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
