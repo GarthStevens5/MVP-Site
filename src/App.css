@@ -13,3 +13,8 @@ img.App-logo{
     flex-direction: column;
     justify-content: space-between;
 }
+
+.Footer{
+    background-color: gray;
+    height: 18vh;
+}
