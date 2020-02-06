@@ -1,5 +1,5 @@
 Body{
-    width: 100vw;
+    max-width: 100vw;
     /* background-color: beige; */
 }
 
@@ -9,6 +9,8 @@ img.App-logo{
   }
 
 .HomePage{
+    display: block;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,10 +47,37 @@ Footer{
 
 .WinnersPage{
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.WinnerBannerBox{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
 .WinnerBanner{
     height: 500px;
-    width: 98vw;
+    width: 96vw;
+}
+.JackpotJournal, .Up4Grabs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.JackpotInfo, .Up4GrabsInfo{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.JackpotText, .Up4GrabsText{
+    justify-content: space-evenly;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
 }
