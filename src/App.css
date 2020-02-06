@@ -18,3 +18,37 @@ Footer{
     color: aliceblue;
     background-color: rgb(63, 63, 63);
 }
+
+.Products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.MagazineCover{
+    display: block;
+    height: 65vh;
+}
+
+.TestemonialCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90vw;
+}
+
+.TestimonialPicture{
+    height: 150px;
+    width: 150px;
+}
+
+.WinnersPage{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.WinnerBanner{
+    height: 500px;
+    width: 98vw;
+}

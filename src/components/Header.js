@@ -6,6 +6,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Products from './Products';
 import HomePage from './HomePage';
+import Testimonials from './Testimonials';
+import Winners from './Winners';
 
 const Header = () => { 
   return(
@@ -19,12 +21,14 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/" className="nav-link">Home</Nav.Link>
             <Nav.Link href="/products">Products</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <Nav.Link href="/winners">Winners</Nav.Link>
+            <Nav.Link href="/testimonials">Testimonials</Nav.Link>
+            <NavDropdown title="About" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">FAQs</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Contact</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Privacy</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">BBB Certification</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -32,6 +36,8 @@ const Header = () => {
       <Switch>
               <Route exact path='/' component={HomePage} />
               <Route path='/products' component={Products} />
+              <Route path='/Winners' component={Winners} />
+              <Route path='/testimonials' component={Testimonials} />
           </Switch>
     </div>
     </Router>
