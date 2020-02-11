@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../logo.png'
+import logo from '../MVP_Logo_noText.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Products from './Products';

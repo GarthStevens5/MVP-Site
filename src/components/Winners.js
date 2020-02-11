@@ -55,7 +55,7 @@ const Winners = () => {
             <Card bg="primary" text="white" className="text-center p-3">
                 <blockquote className="blockquote mb-0 card-body">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                    Lorem ipsum dolor sit amet, consectetur adipiscing ARE YOU BLUE? elit. Integer posuere
                     erat a ante.
                 </p>
                 <footer className="blockquote-footer">

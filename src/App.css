@@ -14,7 +14,7 @@ img.App-logo{
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 hr {
@@ -166,31 +166,48 @@ Footer{
 .OVContainer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .OVLeft{
     display: flex;
-    width: 25%;
+    width: 40%;
     flex-direction: column;
+}
+
+.OVBoxPair1{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.OVBoxMaster{
+    display: flex;
+    flex-direction: row;
+}
+
+.OVBoxPair2{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.text-center p-3{
+    height: 250px;
+    width: 250px;
 }
 
 .OVRight{
     display: flex;
-    width: 25%;
+    width: 40%;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  }
-
   .StaffPic{
-      height: 200px;
-      width: 290px;
+      height: 300px;
+      width: 420px;
+      margin-left: 4vw;
   }
 
   @import url(https://fonts.googleapis.com/css?family=Raleway);
@@ -246,7 +263,10 @@ Footer{
     overflow: hidden;
   }
   
-
+.OVMotto{
+    margin-left: 4vh;
+    margin-right: 4vh;
+}
 
   .content .content-overlay {
     background: rgba(0,0,0,0.7);
