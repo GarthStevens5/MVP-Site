@@ -7,24 +7,41 @@ const Footer = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
+            <h5 className="title">Mountain View Publishers</h5>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.            </p>
+                1505 West 1st Avenue
+                Broomfield, CO 80020
+            </p>
+            <p>
+                Call: (800) MVP-7989
+            </p>
+            <p>
+                Email: support@mvpmail.com
+            </p>
           </MDBCol>
           <MDBCol md="6">
-            <h5 className="title">Links</h5>
+            <h5 className="title">Navigation</h5>
             <ul>
               <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+                <a href="/">Home</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+                <a href="#!">About</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 3</a>
+                <a href="/products">Products</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 4</a>
+                <a href="/promotions">Promotions</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/testimonials">Testimonials</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/winners">Winners</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">Credentials</a>
               </li>
             </ul>
           </MDBCol>

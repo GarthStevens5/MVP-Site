@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../logo.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Products from './Products';
@@ -11,31 +10,14 @@ import HomePage from './HomePage';
 import Testimonials from './Testimonials';
 import Winners from './Winners';
 import Privacy from './Privacy';
-import Promotions from './Promotions';
 
-const Header = () => { 
+const NavBar = () => { 
   return(
     <Router>
     <div>
       <Navbar bg="light" expand="lg">
-      <hr />
-        <div className="TopHeader">
-        <div className="HeaderBrand">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Navbar.Brand href="/">Mountain View Publishers</Navbar.Brand>
-        </div>
-        <div className="ContactInfo">
-          <Navbar.Brand>Email: support@mvpmail.com</Navbar.Brand>
-          <Navbar.Brand>Call: (800) MVP-7989</Navbar.Brand>
-        </div>
-        </div>
-      </Navbar>
-      <Navbar bg="dark" variant="dark" expand="lg">
-      
-        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <hr />
           <Nav className="mr-auto">
             <Nav.Link href="/" className="nav-link">Home</Nav.Link>
             <NavDropdown title="Products" id="basic-nav-dropdown">
@@ -44,7 +26,6 @@ const Header = () => {
               <NavDropdown.Item href="/jackpot-journal">JackpotJournal</NavDropdown.Item>
               <NavDropdown.Item href="/Up4Grabs">Up4Grabs</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/promotions">Promotions</Nav.Link>
             <Nav.Link href="/winners">Winners</Nav.Link>
             <Nav.Link href="/testimonials">Testimonials</Nav.Link>
             <NavDropdown title="About" id="basic-nav-dropdown">
@@ -63,7 +44,6 @@ const Header = () => {
               <Route path='/jackpot-journal' component={JackpotJournal} />
               <Route path='/Up4Grabs' component={Up4Grabs} />
               <Route path='/privacy' component={Privacy} />
-              <Route path='/promotions' component={Promotions} />
               <Route path='/winners' component={Winners} />
               <Route path='/testimonials' component={Testimonials} />
               <Route path='/privacy' component={Privacy} />
@@ -73,4 +53,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default NavBar
