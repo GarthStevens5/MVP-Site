@@ -175,21 +175,17 @@ Footer{
     flex-direction: column;
 }
 
-.OVBoxPair1{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-}
+
 
 .OVBoxMaster{
     display: flex;
     flex-direction: row;
+    
 }
 
-.OVBoxPair2{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
+.OVIcon{
+    height: 200px;
+    width: 200px;
 }
 
 .text-center p-3{
