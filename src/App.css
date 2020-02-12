@@ -83,6 +83,7 @@ Footer{
 }
 
 .MagazineCover{
+  margin-top: 4vh;
     display: block;
     height: 65vh;
 }
@@ -163,6 +164,34 @@ Footer{
     justify-content: flex-start;
 }
 
+.JackpotLeft{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.JackpotRight{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.JackpotText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.JJIcon{
+  height: 200px;
+  width: 200px;
+  padding: 2px;
+}
+
 .OVContainer{
     display: flex;
     flex-direction: row;
@@ -183,11 +212,47 @@ Footer{
     
 }
 
-.OVIcon{
-    height: 200px;
-    width: 200px;
-}
 
+
+.OVIcon{
+    height: 250px;
+    width: 250px;
+    padding: 2px;
+}
+button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: buttonface;
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 11px system-ui;
+  padding: 1px 7px 2px;
+  border-width: 1px;
+  border-style: hidden;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgba(186, 186, 186, 0);
+  border-image: initial;
+}
+.btn{
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.btn-secondary {
+  color: darkgray;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: end;
+}
 .text-center p-3{
     height: 250px;
     width: 250px;

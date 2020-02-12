@@ -17,7 +17,7 @@ const HomePageRecentMagazines = () => {
         </div>
         <div className="MagazineRack">
             <div class="content">
-                <a href="/products" >
+                <a href="/jackpot-journal" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage1}></img>
                     <div class="content-details fadeIn-bottom">
@@ -27,7 +27,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/jackpot-journal" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage2}></img>
                     <div class="content-details fadeIn-bottom">
@@ -37,7 +37,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/up4grabs" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage3}></img>
                     <div class="content-details fadeIn-bottom">
@@ -47,7 +47,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/jackpot-journal" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage4}></img>
                     <div class="content-details fadeIn-bottom">
@@ -57,7 +57,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/up4grabs" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage5}></img>
                     <div class="content-details fadeIn-bottom">
@@ -67,7 +67,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/jackpot-journal" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage6}></img>
                     <div class="content-details fadeIn-bottom">
@@ -77,7 +77,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/up4grabs" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage7}></img>
                     <div class="content-details fadeIn-bottom">
@@ -87,7 +87,7 @@ const HomePageRecentMagazines = () => {
                 </a>
             </div>
             <div class="content">
-                <a href="/products" >
+                <a href="/jackpot-journal" >
                     <div class="content-overlay"></div>
                     <img class="content-image" alt='' src={MagImage8}></img>
                     <div class="content-details fadeIn-bottom">

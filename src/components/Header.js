@@ -4,7 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../MVP_Logo_noText.png'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Products from './Products';
 import JackpotJournal from './JackpotJournal';
 import Up4Grabs from './Up4Grabs'; 
 import HomePage from './HomePage';
@@ -12,9 +11,60 @@ import Testimonials from './Testimonials';
 import Winners from './Winners';
 import Privacy from './Privacy';
 import Promotions from './Promotions';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 
-const Header = () => { 
-  return(
+export class Header extends React.Component {
+
+  constructor(props) {
+    
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.toggle2 = this.toggle.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseEnter2 = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.onMouseLeave2 = this.onMouseLeave.bind(this);
+    this.state = {
+      dropdownOpen: false,
+    };
+    this.state2 = {
+      dropdown2Open: false
+    };
+  }
+  
+
+  toggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+
+  toggle2() {
+    this.setState(prevState => ({
+      dropdown2Open: !prevState.dropdown2Open
+    }));
+  }
+
+  onMouseEnter() {
+    this.setState({dropdownOpen: true});
+  }
+
+  onMouseLeave() {
+    this.setState({dropdownOpen: false});
+  }
+
+  onMouseEnter2() {
+    this.setState({dropdownOpen2: true});
+  }
+
+  onMouseLeave2() {
+    this.setState({dropdownOpen2: false});
+  }
+
+  render() {
+    return(
+    <React.Fragment>
     <Router>
     <div>
       <Navbar bg="light" expand="lg">
@@ -38,12 +88,16 @@ const Header = () => {
           <hr />
           <Nav className="mr-auto">
             <Nav.Link href="/" className="nav-link">Home</Nav.Link>
-            <NavDropdown title="Products" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/products">Products Page</NavDropdown.Item>
-            <NavDropdown.Divider />
-              <NavDropdown.Item href="/jackpot-journal">JackpotJournal</NavDropdown.Item>
-              <NavDropdown.Item href="/Up4Grabs">Up4Grabs</NavDropdown.Item>
-            </NavDropdown>
+      <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle >
+          Products
+        </DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem href="/jackpot-journal">Jackpot Journal</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem href="/Up4Grabs">Up4Grab$</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
             <Nav.Link href="/promotions">Promotions</Nav.Link>
             <Nav.Link href="/winners">Winners</Nav.Link>
             <Nav.Link href="/testimonials">Testimonials</Nav.Link>
@@ -54,12 +108,28 @@ const Header = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">BBB Certification</NavDropdown.Item>
             </NavDropdown>
+            {/* <Dropdown className="d-inline-block" onMouseOver2={this.onMouseEnter2} onMouseLeave2={this.onMouseLeave2} isOpen={this.state2.dropdown2Open} toggle={this.toggle2}>
+        <DropdownToggle >
+          About
+        </DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem href="/contact">Contact</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem href="/faq">FAQs</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem href="/privacy">Privacy</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem href="/BBB">BBB Certification</DropdownItem>
+        </DropdownMenu>
+      </Dropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+      
+
       <Switch>
               <Route exact path='/' component={HomePage} />
-              <Route path='/products' component={Products} />
               <Route path='/jackpot-journal' component={JackpotJournal} />
               <Route path='/Up4Grabs' component={Up4Grabs} />
               <Route path='/privacy' component={Privacy} />
@@ -70,7 +140,9 @@ const Header = () => {
           </Switch>
     </div>
     </Router>
+    </React.Fragment>
   )
+}
 }
 
 export default Header
