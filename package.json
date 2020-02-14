@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
     "flow-bin": "^0.117.0",
+    "jquery": "^3.4.1",
     "mdbreact": "^4.25.1",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",

@@ -186,9 +186,9 @@ Footer{
   justify-content: space-evenly;
 }
 
-.JJIcon{
-  height: 200px;
-  width: 200px;
+.zoom{
+  height: 280px;
+  width: 180px;
   padding: 2px;
 }
 
@@ -206,19 +206,37 @@ Footer{
 
 
 
+
 .OVBoxMaster{
     display: flex;
     flex-direction: row;
     
 }
 
+.preview {
+  width: 400px;
+  overflow: hidden;
+}
 
+.preview img {
+  width: 100%;
+  height: auto;
+}
 
 .OVIcon{
     height: 250px;
     width: 250px;
     padding: 2px;
 }
+
+.placeholder {
+  width: 300;
+  height: 610px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('./JJCovers/1JJ2019.png');
+}
+
 button {
   -webkit-appearance: button;
   -webkit-writing-mode: horizontal-tb !important;

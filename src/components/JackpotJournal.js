@@ -1,23 +1,63 @@
 import React from 'react'
-import Image from 'react-bootstrap/Image'
-import HoverImage from "react-hover-image"
-import Icon1 from "../icon1.png"
-import Icon1B from "../icon1b.png"
-import Icon2 from "../icon2.png"
-import Icon2B from "../icon2b.png"
-import Icon3 from "../icon3.png"
-import Icon3B from "../icon3b.png"
-import Icon4 from "../icon4.png"
-import Icon4B from "../icon4b.png"
+import Icon1 from "../JJCovers/1JJ2019.png"
+import IconP from "../JJCovers/1JJ2019.png"
+import Icon2 from "../JJCovers/2JJ2019.png"
+import Icon3 from "../JJCovers/3JJ2019.png"
+import Icon4 from "../JJCovers/4JJ2019.png"
+import Icon5 from "../JJCovers/5JJ2019.png"
+import Icon6 from "../JJCovers/6JJ2019.png"
+import Icon7 from "../JJCovers/7JJ2019.png"
+import Icon8 from "../JJCovers/8JJ2019.png"
+import Icon9 from "../JJCovers/9JJ2019.png"
+import Icon10 from "../JJCovers/10JJ2019.png"
+import Icon11 from "../JJCovers/11JJ2019.png"
+import Icon12 from "../JJCovers/12JJ2019.png"
+import $ from "jquery"
+
 
 export class JackpotJournal extends React.Component {
-  render(){ 
+  
+  render(){
+     
+    $("img.preview").mouseout(
+      function(){
+        $(".preview").html( $("<img>").attr("src", {Icon1}) );
+      }
+      
+    );
+    $(function(){
+      $("img.zoom").mouseover(
+        function(){
+          $(".preview").html( $("<img>").attr("src", $(this).attr("rel")) );
+        }
+      );
+      $('img.zoom').on("error", function() {
+        $(this).attr('src', '/images/missing.png');
+      });
+      $("img.zoom").on("error", function() {
+        $(this).hide();
+      });
+        $("img.zoom").mouseout(
+        function(){
+          $(".preview").html( $("<img>").attr("src", {IconP}),("rel", {IconP}) );
+        }
+      );
+      (function() {
+        var allimgs = document.images;
+        for (var i = 0; i < allimgs.length; i++) {
+            allimgs[i].onerror = function() {
+                this.style.visibility = "hidden"; // Other elements aren't affected. 
+            }
+        }
+    })();
+    });
   return(
     <div className="JackpotJournal">
       <div className="JackpotLeft">
-        <div className="JackpotCover">
-            <Image className="MagazineCover"
-            src="https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif" responsive />           
+        <div className="placeholder">
+          <div class="preview">
+            <img onerror="this.onerror=null;this.src={Icon1};" className="PVImg" rel="/static/media/1JJ2019.95cb5aaf.png" alt="Hello" title="Hello" src="https://ik.imagekit.io/demo/img/tr:di-default-image.jpg/original-image.jpg"></img>
+          </div>
         </div>
         <div className="JackpotText">
           <h1>Jackpot Journal</h1>
@@ -25,59 +65,25 @@ export class JackpotJournal extends React.Component {
         </div>
       </div>
       <div className="JackpotRight">
-      <div>
-        <HoverImage className="JJIcon"
-            src={Icon1}
-            hoverSrc={Icon1B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon2}
-            hoverSrc={Icon2B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon4}
-            hoverSrc={Icon4B}
-            div></HoverImage>
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
-        <HoverImage className="JJIcon"
-            src={Icon3}
-            hoverSrc={Icon3B}
-        />
+      
+      
+  
+  <div class="thumbs">    
+    <img alt="" src={Icon1} rel={Icon1} class="zoom" />
+    <img alt="" src={Icon2} rel={Icon2} class="zoom" />
+    <img alt="" src={Icon3} rel={Icon3} class="zoom" />
+    <img alt="" src={Icon4} rel={Icon4} class="zoom" />
+    <img alt="" src={Icon5} rel={Icon5} class="zoom" />
+    <img alt="" src={Icon6} rel={Icon6} class="zoom" />
+    <img alt="" src={Icon7} rel={Icon7} class="zoom" />
+    <img alt="" src={Icon8} rel={Icon8} class="zoom" />
+    <img alt="" src={Icon9} rel={Icon9} class="zoom" />
+    <img alt="" src={Icon10} rel={Icon10} class="zoom" />
+    <img alt="" src={Icon11} rel={Icon11} class="zoom" />
+    <img alt="" src={Icon12} rel={Icon12} class="zoom" />
+  </div>
       </div>
-    </div>
-    </div>
-  )
+    </div>)
 }
 }
 
