@@ -18,7 +18,6 @@ import $ from "jquery"
 export class JackpotJournal extends React.Component {
   
   render(){
-     
     $("img.preview").mouseout(
       function(){
         $(".preview").html( $("<img>").attr("src", {Icon1}) );
@@ -40,8 +39,10 @@ export class JackpotJournal extends React.Component {
         $("img.zoom").mouseout(
         function(){
           $(".preview").html( $("<img>").attr("src", {IconP}),("rel", {IconP}) );
+          
         }
       );
+      
       (function() {
         var allimgs = document.images;
         for (var i = 0; i < allimgs.length; i++) {
@@ -52,11 +53,13 @@ export class JackpotJournal extends React.Component {
     })();
     });
   return(
+    
     <div className="JackpotJournal">
       <div className="JackpotLeft">
         <div className="placeholder">
           <div class="preview">
-            <img onerror="this.onerror=null;this.src={Icon1};" className="PVImg" rel="/static/media/1JJ2019.95cb5aaf.png" alt="Hello" title="Hello" src="https://ik.imagekit.io/demo/img/tr:di-default-image.jpg/original-image.jpg"></img>
+          <script src="https://unpkg.com/react-image/umd/index.js"></script>
+            <img onError={this.addDefaultSrc} className="img-responsive" src={Icon1} alt="" rel="/static/media/1JJ2019.95cb5aaf.png"></img>
           </div>
         </div>
         <div className="JackpotText">

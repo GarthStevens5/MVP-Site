@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../MVP_Logo_noText.png'
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import JackpotJournal from './JackpotJournal';
 import Up4Grabs from './Up4Grabs'; 
@@ -89,27 +88,7 @@ export class Header extends React.Component {
           <Nav className="mr-auto">
             <Nav.Link href="/" className="nav-link">Home</Nav.Link>
       <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle >
-          Products
-        </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem href="/jackpot-journal">Jackpot Journal</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem href="/Up4Grabs">Up4Grab$</DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-            <Nav.Link href="/promotions">Promotions</Nav.Link>
-            <Nav.Link href="/winners">Winners</Nav.Link>
-            <Nav.Link href="/testimonials">Testimonials</Nav.Link>
-            <NavDropdown title="About" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">FAQs</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Contact</NavDropdown.Item>
-              <NavDropdown.Item href="/privacy">Privacy</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">BBB Certification</NavDropdown.Item>
-            </NavDropdown>
-            {/* <Dropdown className="d-inline-block" onMouseOver2={this.onMouseEnter2} onMouseLeave2={this.onMouseLeave2} isOpen={this.state2.dropdown2Open} toggle={this.toggle2}>
-        <DropdownToggle >
+      <DropdownToggle >
           About
         </DropdownToggle>
         <DropdownMenu>
@@ -121,7 +100,12 @@ export class Header extends React.Component {
           <DropdownItem divider />
           <DropdownItem href="/BBB">BBB Certification</DropdownItem>
         </DropdownMenu>
-      </Dropdown> */}
+      </Dropdown>
+            <Nav.Link href="/jackpot-journal">Jackpot Journal</Nav.Link>
+            <Nav.Link href="/up4grabs">Up4Grab$</Nav.Link>
+            <Nav.Link href="/promotions">Promotions</Nav.Link>
+            <Nav.Link href="/winners">Winners</Nav.Link>
+            <Nav.Link href="/testimonials">Testimonials</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
