@@ -1,6 +1,5 @@
 import React from 'react'
 import Icon1 from "../JJCovers/1JJ2019.png"
-import IconP from "../JJCovers/1JJ2019.png"
 import Icon2 from "../JJCovers/2JJ2019.png"
 import Icon3 from "../JJCovers/3JJ2019.png"
 import Icon4 from "../JJCovers/4JJ2019.png"
@@ -12,54 +11,26 @@ import Icon9 from "../JJCovers/9JJ2019.png"
 import Icon10 from "../JJCovers/10JJ2019.png"
 import Icon11 from "../JJCovers/11JJ2019.png"
 import Icon12 from "../JJCovers/12JJ2019.png"
+import FeatureContainer from "./FeatureContainer"
 import $ from "jquery"
 
 
 export class JackpotJournal extends React.Component {
   
   render(){
-    $("img.preview").mouseout(
-      function(){
-        $(".preview").html( $("<img>").attr("src", {Icon1}) );
-      }
-      
-    );
-    $(function(){
-      $("img.zoom").mouseover(
-        function(){
-          $(".preview").html( $("<img>").attr("src", $(this).attr("rel")) );
-        }
-      );
-      $('img.zoom').on("error", function() {
-        $(this).attr('src', '/images/missing.png');
-      });
-      $("img.zoom").on("error", function() {
-        $(this).hide();
-      });
-        $("img.zoom").mouseout(
-        function(){
-          $(".preview").html( $("<img>").attr("src", {IconP}),("rel", {IconP}) );
-          
-        }
-      );
-      
-      (function() {
-        var allimgs = document.images;
-        for (var i = 0; i < allimgs.length; i++) {
-            allimgs[i].onerror = function() {
-                this.style.visibility = "hidden"; // Other elements aren't affected. 
-            }
-        }
-    })();
-    });
-  return(
-    
+    var view = function(e){
+    $(".preview").html( $("<img>").attr("src", $(e.target).attr("rel")) );
+};
+
+$("img.zoom").mouseover(view);
+view({target: $("img.zoom")[0]});
+  return(  
     <div className="JackpotJournal">
       <div className="JackpotLeft">
         <div className="placeholder">
-          <div class="preview">
-          <script src="https://unpkg.com/react-image/umd/index.js"></script>
-            <img onError={this.addDefaultSrc} className="img-responsive" src={Icon1} alt="" rel="/static/media/1JJ2019.95cb5aaf.png"></img>
+          <div className="preview">
+            <script src="https://unpkg.com/react-image/umd/index.js"></script>
+            <img className="img-responsive" src={Icon1} alt="" rel="/static/media/1JJ2019.95cb5aaf.png"></img>
           </div>
         </div>
         <div className="JackpotText">
@@ -68,24 +39,27 @@ export class JackpotJournal extends React.Component {
         </div>
       </div>
       <div className="JackpotRight">
-      
-      
-  
-  <div class="thumbs">    
-    <img alt="" src={Icon1} rel={Icon1} class="zoom" />
-    <img alt="" src={Icon2} rel={Icon2} class="zoom" />
-    <img alt="" src={Icon3} rel={Icon3} class="zoom" />
-    <img alt="" src={Icon4} rel={Icon4} class="zoom" />
-    <img alt="" src={Icon5} rel={Icon5} class="zoom" />
-    <img alt="" src={Icon6} rel={Icon6} class="zoom" />
-    <img alt="" src={Icon7} rel={Icon7} class="zoom" />
-    <img alt="" src={Icon8} rel={Icon8} class="zoom" />
-    <img alt="" src={Icon9} rel={Icon9} class="zoom" />
-    <img alt="" src={Icon10} rel={Icon10} class="zoom" />
-    <img alt="" src={Icon11} rel={Icon11} class="zoom" />
-    <img alt="" src={Icon12} rel={Icon12} class="zoom" />
-  </div>
+        <div className="thumbs">    
+          <img alt="" src={Icon1} rel={Icon1} className="zoom" />
+          <img alt="" src={Icon2} rel={Icon2} className="zoom" />
+          <img alt="" src={Icon3} rel={Icon3} className="zoom" />
+          <img alt="" src={Icon4} rel={Icon4} className="zoom" />
+          <img alt="" src={Icon5} rel={Icon5} className="zoom" />
+          <img alt="" src={Icon6} rel={Icon6} className="zoom" />
+          <img alt="" src={Icon7} rel={Icon7} className="zoom" />
+          <img alt="" src={Icon8} rel={Icon8} className="zoom" />
+          <img alt="" src={Icon9} rel={Icon9} className="zoom" />
+          <img alt="" src={Icon10} rel={Icon10} className="zoom" />
+          <img alt="" src={Icon11} rel={Icon11} className="zoom" />
+          <img alt="" src={Icon12} rel={Icon12} className="zoom" />
+        </div>
       </div>
+      <hr />
+      <div className="SpacerTitle">
+        <h2>FEATURED IN EVERY ISSUE</h2>
+      </div>
+      <hr />
+      <FeatureContainer />
     </div>)
 }
 }

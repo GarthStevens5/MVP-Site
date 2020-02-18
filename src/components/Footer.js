@@ -29,7 +29,10 @@ const Footer = () => {
                 <a href="#!">About</a>
               </li>
               <li className="list-unstyled">
-                <a href="/products">Products</a>
+                <a href="/jackpot-journal">Jackpot Journal</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="/up4grabs">Up$Grabs</a>
               </li>
               <li className="list-unstyled">
                 <a href="/promotions">Promotions</a>
