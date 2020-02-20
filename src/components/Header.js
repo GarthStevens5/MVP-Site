@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../MVP_Logo_noText.png'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import JackpotJournal from './JackpotJournal';
+import AboutPage from './AboutPage';
 import Up4Grabs from './Up4Grabs'; 
 import HomePage from './HomePage';
 import Testimonials from './Testimonials';
@@ -88,7 +89,7 @@ export class Header extends React.Component {
           <Nav className="mr-auto">
             <Nav.Link href="/" className="nav-link">Home</Nav.Link>
       <Dropdown className="d-inline-block" onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-      <DropdownToggle >
+      <DropdownToggle href="/about" >
           About
         </DropdownToggle>
         <DropdownMenu>
@@ -115,6 +116,7 @@ export class Header extends React.Component {
       <Switch>
               <Route exact path='/' component={HomePage} />
               <Route path='/jackpot-journal' component={JackpotJournal} />
+              <Route path='/about' component={AboutPage} />
               <Route path='/Up4Grabs' component={Up4Grabs} />
               <Route path='/privacy' component={Privacy} />
               <Route path='/promotions' component={Promotions} />

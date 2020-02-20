@@ -13,23 +13,11 @@ const HomePage = () => {
     return(
     <div className="HomePage">
       <HomePageCarousel />
-      <hr />
-      <hr />
       <HomePageOverView />
-      <hr />
-      <hr className="HRBoarder" />
       <StatBar />
-      <hr className="HRBoarder" />
-      <hr />
-      <HomePageRecentMagazines />
-      <hr />
-      <hr />      
+      <HomePageRecentMagazines />     
       <HomePageCards />
-      <hr />
-      <hr />
       <SocialMediaLinkBoxes />
-      <hr />
-      <hr />
     </div>
     )
 }

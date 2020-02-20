@@ -51,12 +51,12 @@ export class Up4Grabs extends React.Component {
           
         </div>
       </div>
-      <hr />
-      <div className="SpacerTitle">
-        <h2>FEATURED IN EVERY ISSUE</h2>
-      </div>
-      <hr />
-      <UpFeatureContainer />
+        <div className="UpBottom">
+          <div className="SpacerTitle">
+            <h2>FEATURED IN EVERY ISSUE</h2>
+          </div>
+          <UpFeatureContainer />
+        </div>
     </div>)
 }
 }

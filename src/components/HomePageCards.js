@@ -7,7 +7,7 @@ import Promo3 from '../promo3.png'
 
 const HomePageCards = () => { 
   return(
-    <div>
+    <div className="CardBoxWhole">
         <CardDeck className="HomePageCardBox">
     
     <Card>

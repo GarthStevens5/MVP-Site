@@ -16,83 +16,83 @@ const HomePageRecentMagazines = () => {
                 <h1>Our Recent Magazines</h1>
         </div>
         <div className="MagazineRack">
-            <div class="content">
+            <div className="content">
                 <a href="/jackpot-journal" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage1}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Jackpot Journal</h3>
-                        <p class="content-text">October 2019 | $183,595.00</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage1}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Jackpot Journal</h3>
+                        <p className="content-text">October 2019 | $183,595.00</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/jackpot-journal" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage2}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Jackpot Journal</h3>
-                        <p class="content-text">November 2019 : $415,400.42</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage2}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Jackpot Journal</h3>
+                        <p className="content-text">November 2019 : $415,400.42</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/up4grabs" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage3}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Up4Grab$</h3>
-                        <p class="content-text">November 2019 : $198.525.60</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage3}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Up4Grab$</h3>
+                        <p className="content-text">November 2019 : $198.525.60</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/jackpot-journal" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage4}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Jackpot Journal</h3>
-                        <p class="content-text">December 2019 : $202,187.00</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage4}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Jackpot Journal</h3>
+                        <p className="content-text">December 2019 : $202,187.00</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/up4grabs" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage5}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Up4Grab$</h3>
-                        <p class="content-text">December 2019 : $348,148.00</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage5}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Up4Grab$</h3>
+                        <p className="content-text">December 2019 : $348,148.00</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/jackpot-journal" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage6}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Jackpot Journal</h3>
-                        <p class="content-text">January 2020 : $222,225.99</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage6}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Jackpot Journal</h3>
+                        <p className="content-text">January 2020 : $222,225.99</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/up4grabs" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage7}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Up4Grab$</h3>
-                        <p class="content-text">January 2020 : $202,054.57</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage7}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Up4Grab$</h3>
+                        <p className="content-text">January 2020 : $202,054.57</p>
                     </div>
                 </a>
             </div>
-            <div class="content">
+            <div className="content">
                 <a href="/jackpot-journal" >
-                    <div class="content-overlay"></div>
-                    <img class="content-image" alt='' src={MagImage8}></img>
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Jackpot Journal</h3>
-                        <p class="content-text">February 2020 : $273,770.99</p>
+                    <div className="content-overlay"></div>
+                    <img className="content-image" alt='' src={MagImage8}></img>
+                    <div className="content-details fadeIn-bottom">
+                        <h3 className="content-title">Jackpot Journal</h3>
+                        <p className="content-text">February 2020 : $273,770.99</p>
                     </div>
                 </a>
             </div>
