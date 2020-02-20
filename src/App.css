@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 Body{
     max-width: 100vw;
     /* background-color: beige; */
@@ -200,7 +202,13 @@ Footer{
   height: 20vh;
   width: 100vw;
 }
-
+.SocialMediaLinkBoxes{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: 100vw;
+}
 .SplitBox{
   align-content: center;
   display: flex;
@@ -226,19 +234,8 @@ Footer{
   justify-content: space-evenly;
 
 }
-img {
-  width: 33%;
-  height: auto;
-}
 
-.preview {
-  width: 400px;
-  overflow: hidden;
-}
 
-.preview img {
-  width: 100%;
-}
 .UpBottom{
   height: 25vh;
 }
@@ -321,6 +318,7 @@ img {
   height: 610px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url('./JJCovers/1JJ2019.png');
 }
 
 .thumbs{
@@ -333,12 +331,12 @@ img {
 
 }
 
-
 .placeholderUP {
   width: 300;
   height: 610px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url('./UPCovers/1UP2019.png');
 }
 
 

@@ -18,19 +18,27 @@ import $ from "jquery"
 export class JackpotJournal extends React.Component {
   
   render(){
-    var view = function(e){
-    $(".preview").html( $("<img>").attr("src", $(e.target).attr("rel")) );
-};
-
-$("img.zoom").mouseover(view);
-view({target: $("img.zoom")[0]});
-  return(  
+    $(function(){
+      $("img.zoom").mouseover(
+        function(){
+          $(".preview").html( $("<img>").attr("src", $(this).attr("rel")) );
+        }
+      );
+      (function() {
+        var allimgs = document.images;
+        for (var i = 0; i < allimgs.length; i++) {
+            allimgs[i].onerror = function() {
+                this.style.visibility = "hidden"; // Other elements aren't affected. 
+            }
+        }
+    })();
+    });
+  return(
     <div className="JackpotJournal">
       <div className="JackpotLeft">
         <div className="placeholder">
-          <div className="preview">
-            <script src="https://unpkg.com/react-image/umd/index.js"></script>
-            <img className="img-responsive" src={Icon1} alt="" rel="/static/media/1JJ2019.95cb5aaf.png"></img>
+          <div class="preview">
+            <img onerror="this.onerror=null;this.src={Icon1};" className="PVImg" rel={Icon1} alt="Hello" title="Hello" src={Icon1}></img>
           </div>
         </div>
         <div className="JackpotText">
@@ -39,20 +47,24 @@ view({target: $("img.zoom")[0]});
         </div>
       </div>
       <div className="JackpotRight">
-        <div className="thumbs">    
-          <img alt="" src={Icon1} rel={Icon1} className="zoom" />
-          <img alt="" src={Icon2} rel={Icon2} className="zoom" />
-          <img alt="" src={Icon3} rel={Icon3} className="zoom" />
-          <img alt="" src={Icon4} rel={Icon4} className="zoom" />
-          <img alt="" src={Icon5} rel={Icon5} className="zoom" />
-          <img alt="" src={Icon6} rel={Icon6} className="zoom" />
-          <img alt="" src={Icon7} rel={Icon7} className="zoom" />
-          <img alt="" src={Icon8} rel={Icon8} className="zoom" />
-          <img alt="" src={Icon9} rel={Icon9} className="zoom" />
-          <img alt="" src={Icon10} rel={Icon10} className="zoom" />
-          <img alt="" src={Icon11} rel={Icon11} className="zoom" />
-          <img alt="" src={Icon12} rel={Icon12} className="zoom" />
-        </div>
+      
+      
+  
+  <div class="thumbs">    
+    <img alt="" src={Icon1} rel={Icon1} class="zoom" />
+    <img alt="" src={Icon2} rel={Icon2} class="zoom" />
+    <img alt="" src={Icon3} rel={Icon3} class="zoom" />
+    <img alt="" src={Icon4} rel={Icon4} class="zoom" />
+    <img alt="" src={Icon5} rel={Icon5} class="zoom" />
+    <img alt="" src={Icon6} rel={Icon6} class="zoom" />
+    <img alt="" src={Icon7} rel={Icon7} class="zoom" />
+    <img alt="" src={Icon8} rel={Icon8} class="zoom" />
+    <img alt="" src={Icon9} rel={Icon9} class="zoom" />
+    <img alt="" src={Icon10} rel={Icon10} class="zoom" />
+    <img alt="" src={Icon11} rel={Icon11} class="zoom" />
+    <img alt="" src={Icon12} rel={Icon12} class="zoom" />
+  </div>
+  
       </div>
       <hr />
       <div className="SpacerTitle">
@@ -60,7 +72,10 @@ view({target: $("img.zoom")[0]});
       </div>
       <hr />
       <FeatureContainer />
-    </div>)
+    </div>
+    
+    )
+    
 }
 }
 

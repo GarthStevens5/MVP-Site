@@ -1,22 +1,36 @@
 import React from 'react'
+import $ from "jquery"
 import Icon1 from "../UPCovers/1UP2019.png"
 import Icon2 from "../UPCovers/2UP2019.png"
 import Icon3 from "../UPCovers/3UP2020.png"
 import Icon4 from "../UPCovers/4UP2020.png"
-import FeatureContainer from "./FeatureContainer"
+import UpFeatureContainer from "./UpFeatureContainer"
 
 
 export class Up4Grabs extends React.Component {
   
   render(){
-    
+    $(function(){
+      $("img.zoom").mouseover(
+        function(){
+          $(".preview").html( $("<img>").attr("src", $(this).attr("rel")) );
+        }
+      );
+      (function() {
+        var allimgs = document.images;
+        for (var i = 0; i < allimgs.length; i++) {
+            allimgs[i].onerror = function() {
+                this.style.visibility = "hidden"; // Other elements aren't affected. 
+            }
+        }
+    })();
+    });
   return(  
     <div className="Up4Grabs">
       <div className="Up4GrabsLeft">
         <div className="placeholder">
           <div className="preview">
-            <script src="https://unpkg.com/react-image/umd/index.js"></script>
-            <img className="img-responsive" src={Icon1} alt="" rel={Icon1}></img>
+            <img className="img-responsive" src={Icon1} alt=""></img>
           </div>
         </div>
         <div className="Up4GrabsText">
@@ -42,7 +56,7 @@ export class Up4Grabs extends React.Component {
         <h2>FEATURED IN EVERY ISSUE</h2>
       </div>
       <hr />
-      <FeatureContainer />
+      <UpFeatureContainer />
     </div>)
 }
 }

@@ -4,6 +4,7 @@ import HomePageCards from './HomePageCards'
 import HomePageRecentMagazines from './HomePageRecentMagazines'
 import StatBar from './StatBar'
 import HomePageOverView from './HomePageOverview'
+import SocialMediaLinkBoxes from './SocialMediaLinkBoxes'
 
 
 
@@ -24,6 +25,9 @@ const HomePage = () => {
       <hr />
       <hr />      
       <HomePageCards />
+      <hr />
+      <hr />
+      <SocialMediaLinkBoxes />
       <hr />
       <hr />
     </div>
