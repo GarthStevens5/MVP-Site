@@ -18,15 +18,16 @@ class QuoteCardCarousel extends Component {
   static get CARD_STYLE() {
     return {
       height: "350px",
-      width: "700px",
+      width: "63vw",
       paddingTop: "80px",
       textAlign: "center",
-      background: "#d3d3d3",
+      background: "white",
       color: "#000000",
       fontFamily: "sans-serif",
       fontSize: "12px",
       textTransform: "uppercase",
-      borderRadius: "10px",
+      borderRadius: "4px",
+      borderColor: "#ob416a",
       boxSizing: "border-box"
     };
   }
@@ -35,27 +36,27 @@ class QuoteCardCarousel extends Component {
     return (
       <div className="QuoteCardCarousel" style={QuoteCardCarousel.CONTAINER_STYLE}>
         <ReactCardCarousel autoplay={true} autoplay_speed={5000}>
-          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <div className="QuoteCard" style={QuoteCardCarousel.CARD_STYLE}>
           <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
           <h4>Marge Simpson</h4>
           <p>Wow! I cant belive I won! That never happens to me!</p>
           </div>
-          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <div className="QuoteCard" style={QuoteCardCarousel.CARD_STYLE}>
           <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
           <h4>Linda Belcher</h4>
           <p>Wow! I cant belive I won! That never happens to me!</p>
           </div>
-          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <div className="QuoteCard" style={QuoteCardCarousel.CARD_STYLE}>
           <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
           <h4>Ms. PacMan</h4>
           <p>Wow! I cant belive I won! That never happens to me!</p>
           </div>
-          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <div className="QuoteCard" style={QuoteCardCarousel.CARD_STYLE}>
           <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
           <h4>Meg Griffin</h4>
           <p>Wow! I cant belive I won! That never happens to me!</p>
           </div>
-          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <div className="QuoteCard" style={QuoteCardCarousel.CARD_STYLE}>
           <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
           <h4>Hello</h4>
           <p>Wow! I cant belive I won! That never happens to me!</p>

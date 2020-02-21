@@ -591,7 +591,14 @@ button {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      
+     
+  }
+
+  .QuoteCard{
+    padding-top: 2vh !important;
+    border-style: solid;
+  border-width: 6px; 
+  border-color: rgb(11, 65, 106);
   }
 
   .MagazineSection{
@@ -605,5 +612,5 @@ button {
   }
 
   .TestimonialImg{
-    height:100px;
+    height:150px;
   }
