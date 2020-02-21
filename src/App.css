@@ -573,6 +573,17 @@ button {
   }
 
   .StatBar{
+    padding-top: 5vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgb(11, 65, 106);
+  }
+
+  .StatContainer{
+    
     color: white;
       display: flex;
       width: 100vw;
@@ -580,21 +591,19 @@ button {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      background-color:rgb(11, 65, 106);
-  }
-
-  .StatContainer{
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+      
   }
 
   .MagazineSection{
-    background-color: rgb(212, 212, 212);
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-color: rgb(226, 226, 226)
-     
+    background-color: rgb(223, 223, 223);
+  }
+
+  .QuoteCardCarousel{
+    background-color: rgb(243, 243, 243);
+  }
+
+  .TestimonialImg{
+    height:100px;
   }

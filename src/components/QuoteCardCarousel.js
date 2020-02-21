@@ -1,30 +1,68 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-import Card from 'react-bootstrap/Card'
+import React, { Component } from "react";
+import ReactCardCarousel from "react-card-carousel";
+import Image from 'react-bootstrap/Image'
 
-const QuoteCardCarousel = () => { 
-  return(
-    <div>
-        <Carousel
-            slidesPerPage={2}
-            arrows
-            infinite
-        >
-            <Card>
-                <Card.Img className="TestimonialPicture"src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" />
-                    <b>"I can't belive I won!"</b>
-            </Card>
-            <Card>
-                <Card.Img className="TestimonialPicture"src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" />
-                    <b>"I can't belive I won!"</b>
-            </Card>
-            <Card>
-                <Card.Img className="TestimonialPicture"src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" />
-                    <b>"I can't belive I won!"</b>
-            </Card>
-        </Carousel>
-    </div>
-  )
+class QuoteCardCarousel extends Component {
+  static get CONTAINER_STYLE() {
+    return {
+      position: "relative",
+      height: "50vh",
+      width: "100%",
+      display: "flex",
+      flex: 1,
+      justifyContent: "space-between",
+      alignItems: "middle"
+    };
+  }
+
+  static get CARD_STYLE() {
+    return {
+      height: "350px",
+      width: "700px",
+      paddingTop: "80px",
+      textAlign: "center",
+      background: "#d3d3d3",
+      color: "#000000",
+      fontFamily: "sans-serif",
+      fontSize: "12px",
+      textTransform: "uppercase",
+      borderRadius: "10px",
+      boxSizing: "border-box"
+    };
+  }
+
+  render() {
+    return (
+      <div className="QuoteCardCarousel" style={QuoteCardCarousel.CONTAINER_STYLE}>
+        <ReactCardCarousel autoplay={true} autoplay_speed={5000}>
+          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
+          <h4>Marge Simpson</h4>
+          <p>Wow! I cant belive I won! That never happens to me!</p>
+          </div>
+          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
+          <h4>Linda Belcher</h4>
+          <p>Wow! I cant belive I won! That never happens to me!</p>
+          </div>
+          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
+          <h4>Ms. PacMan</h4>
+          <p>Wow! I cant belive I won! That never happens to me!</p>
+          </div>
+          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
+          <h4>Meg Griffin</h4>
+          <p>Wow! I cant belive I won! That never happens to me!</p>
+          </div>
+          <div style={QuoteCardCarousel.CARD_STYLE}>
+          <Image className="TestimonialImg" src="https://aebrentals.com/wp-content/uploads/2018/06/happy-lady.png" thumbnail />
+          <h4>Hello</h4>
+          <p>Wow! I cant belive I won! That never happens to me!</p>
+          </div>
+        </ReactCardCarousel>
+      </div>
+    );
+  }
 }
-
 export default QuoteCardCarousel
